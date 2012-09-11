@@ -224,7 +224,7 @@
 #define _ARM_MATH_H
 
 #define __CMSIS_GENERIC              /* disable NVIC and Systick functions */
-#define ARM_MATH_CM3
+#define ARM_MATH_CM3		     /* defines the used core */
 
 #if defined (ARM_MATH_CM4)
   #include "core_cm4.h"
@@ -234,7 +234,7 @@
   #include "core_cm0.h"
 #else
 #include "ARMCM4.h"
-#warning "Define either ARM_MATH_CM4 OR ARM_MATH_CM3...By Default building on ARM_MATH_CM4....."
+
 #endif
 
 #undef  __CMSIS_GENERIC              /* enable NVIC and Systick functions */
